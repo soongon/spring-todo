@@ -17,8 +17,8 @@ public class TodoService {
         return todoDao.selectAllTodos();
     }
 
-    public Todo viewTodoByTodoId(String todoId) {
-        return null;
+    public Todo viewTodoByTodoId(int todoId) {
+        return todoDao.selectTodoByTodoId(todoId);
     }
 
     public void registTodo(Todo todo) {

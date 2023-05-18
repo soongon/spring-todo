@@ -19,7 +19,7 @@ public class TodoController {
     }
 
     @GetMapping("/todos/{todoId}")
-    public Todo viewTodoByTodoId(@PathVariable String todoId) {
+    public Todo viewTodoByTodoId(@PathVariable int todoId) {
         return todoService.viewTodoByTodoId(todoId);
     }
 

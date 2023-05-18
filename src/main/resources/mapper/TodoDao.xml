@@ -9,6 +9,15 @@
                 completed   as completed
         from    todo
     </select>
+    <select id="selectTodoByTodoId"
+            resultType="kr.or.ssis.todo.model.Todo"
+            parameterType="int">
+        select  todo_id     as todoId,
+                title       as title,
+                completed   as completed
+        from    todo
+        where   todo_id = #{todoId};
+    </select>
     <insert id="insertTodo">
         insert into todo (todo_id, title, completed)
         values (#{todoId}, #{title}, #{completed});

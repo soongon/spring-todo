@@ -14,4 +14,6 @@ public interface TodoDao {
     List<Todo> selectAllTodos();
 
     void insertTodo(Todo todo);
+
+    Todo selectTodoByTodoId(int todoId);
 }
