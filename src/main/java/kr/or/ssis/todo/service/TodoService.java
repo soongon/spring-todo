@@ -20,4 +20,8 @@ public class TodoService {
     public Todo viewTodoByTodoId(String todoId) {
         return null;
     }
+
+    public void registTodo(Todo todo) {
+        todoDao.insertTodo(todo);
+    }
 }

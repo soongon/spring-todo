@@ -12,4 +12,6 @@ import java.util.List;
 public interface TodoDao {
 
     List<Todo> selectAllTodos();
+
+    void insertTodo(Todo todo);
 }

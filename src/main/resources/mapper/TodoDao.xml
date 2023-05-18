@@ -9,4 +9,8 @@
                 completed   as completed
         from    todo
     </select>
+    <insert id="insertTodo">
+        insert into todo (todo_id, title, completed)
+        values (#{todoId}, #{title}, #{completed});
+    </insert>
 </mapper>
