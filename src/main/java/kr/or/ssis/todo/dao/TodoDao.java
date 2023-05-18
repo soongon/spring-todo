@@ -15,5 +15,7 @@ public interface TodoDao {
 
     void insertTodo(Todo todo);
 
+    void deleteTodoByTodoId(int todoId);
+
     Todo selectTodoByTodoId(int todoId);
 }

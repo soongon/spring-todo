@@ -22,4 +22,8 @@
         insert into todo (todo_id, title, completed)
         values (#{todoId}, #{title}, #{completed})
     </insert>
+    <delete id="deleteTodoByTodoId" parameterType="int">
+        delete  from todo
+        where   todo_id = #{todoId};
+    </delete>
 </mapper>

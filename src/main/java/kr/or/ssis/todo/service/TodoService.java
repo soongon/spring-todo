@@ -24,4 +24,8 @@ public class TodoService {
     public void registTodo(Todo todo) {
         todoDao.insertTodo(todo);
     }
+
+    public void removeTodoByTodoId(int todoId) {
+        todoDao.deleteTodoByTodoId(todoId);
+    }
 }

@@ -27,4 +27,9 @@ public class TodoController {
     public void registTodo(@RequestBody Todo todo) {
         todoService.registTodo(todo);
     }
+
+    @DeleteMapping("/todos/{todoId}")
+    public void removeTodoByTodoId(@PathVariable int todoId) {
+        todoService.removeTodoByTodoId(todoId);
+    }
 }
