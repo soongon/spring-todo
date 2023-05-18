@@ -22,6 +22,11 @@
         insert into todo (todo_id, title, completed)
         values (#{todoId}, #{title}, #{completed})
     </insert>
+    <update id="updateToCompleteByTodoId" parameterType="int">
+        update  todo
+        set     completed = true
+        where   todo_id = #{todoId}
+    </update>
     <delete id="deleteTodoByTodoId" parameterType="int">
         delete  from todo
         where   todo_id = #{todoId};

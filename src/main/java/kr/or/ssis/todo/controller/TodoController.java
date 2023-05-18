@@ -28,6 +28,11 @@ public class TodoController {
         todoService.registTodo(todo);
     }
 
+    @PutMapping("/todos/{todoId}")
+    public void completeTodo(@PathVariable int todoId) {
+        todoService.completeTodo(todoId);
+    }
+
     @DeleteMapping("/todos/{todoId}")
     public void removeTodoByTodoId(@PathVariable int todoId) {
         todoService.removeTodoByTodoId(todoId);

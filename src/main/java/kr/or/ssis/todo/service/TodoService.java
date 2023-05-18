@@ -25,6 +25,10 @@ public class TodoService {
         todoDao.insertTodo(todo);
     }
 
+    public void completeTodo(int todoId) {
+        todoDao.updateToCompleteByTodoId(todoId);
+    }
+
     public void removeTodoByTodoId(int todoId) {
         todoDao.deleteTodoByTodoId(todoId);
     }
