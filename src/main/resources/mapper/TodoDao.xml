@@ -16,10 +16,10 @@
                 title       as title,
                 completed   as completed
         from    todo
-        where   todo_id = #{todoId};
+        where   todo_id = #{todoId}
     </select>
-    <insert id="insertTodo">
+    <insert id="insertTodo" parameterType="kr.or.ssis.todo.model.Todo">
         insert into todo (todo_id, title, completed)
-        values (#{todoId}, #{title}, #{completed});
+        values (#{todoId}, #{title}, #{completed})
     </insert>
 </mapper>
