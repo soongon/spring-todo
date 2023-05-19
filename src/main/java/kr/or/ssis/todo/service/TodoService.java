@@ -19,7 +19,7 @@ public class TodoService {
     private TodoDao todoDao;
 
     public List<Todo> viewAllTodos() {
-        //log.info("TodoService.viewAllTodos 메소드가 실행됩니다.");
+
         return todoDao.selectAllTodos();
     }
 
