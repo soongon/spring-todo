@@ -7,7 +7,7 @@
         select  todo_id     as todoId,
                 title       as title,
                 completed   as completed
-        from    todo
+        from    todos
     </select>
     <select id="selectTodoByTodoId"
             resultType="kr.or.ssis.todo.model.Todo"
