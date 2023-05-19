@@ -2,6 +2,8 @@ package kr.or.ssis.todo.service;
 
 import kr.or.ssis.todo.dao.TodoDao;
 import kr.or.ssis.todo.model.Todo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +12,14 @@ import java.util.List;
 @Service
 public class TodoService {
 
+    //private static final Logger log =
+    //        LoggerFactory.getLogger(TodoService.class);
+
     @Autowired
     private TodoDao todoDao;
 
     public List<Todo> viewAllTodos() {
+        //log.info("TodoService.viewAllTodos 메소드가 실행됩니다.");
         return todoDao.selectAllTodos();
     }
 
@@ -22,6 +28,7 @@ public class TodoService {
     }
 
     public void registTodo(Todo todo) {
+
         todoDao.insertTodo(todo);
     }
 
